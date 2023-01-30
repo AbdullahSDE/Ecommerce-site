@@ -67,7 +67,6 @@ button.normal {
     color: #ffffff;
 }
 
-
 body {
     width: 100%;
 }
@@ -79,7 +78,7 @@ body {
     align-items: center;
     justify-content: space-between;
     padding: 20px 80px;
-    background-color: #E3E6F3;
+    background-color: #e3e6f3;
     box-shadow: 0 5px 15px rgba(0, 0, 0, 0.06);
     z-index: 999;
     position: sticky;
@@ -123,6 +122,15 @@ body {
     left: 20px;
 }
 
+#mobile {
+    display: none;
+    align-items: center;
+}
+
+#close {
+    display: none;
+}
+
 /* Home Page */
 
 #hero {
@@ -148,12 +156,12 @@ body {
 
 #hero h1 {
     color: rgb(202, 127, 35);
-    font-family: Georgia, 'Times New Roman', Times, serif;
+    font-family: Georgia, "Times New Roman", Times, serif;
 }
 
 #hero h2 {
     color: rgb(50, 45, 45);
-    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-family: "Franklin Gothic Medium", "Arial Narrow", Arial, sans-serif;
 }
 
 #hero button {
@@ -177,7 +185,6 @@ body {
     color: #f6dbf6;
 }
 
-
 #feature .fe-box {
     width: 180px;
     text-align: center;
@@ -190,7 +197,6 @@ body {
 
 #feature .fe-box:hover {
     box-shadow: 10px 10px 54px rgba(70, 62, 211, 0.1);
-
 }
 
 #feature .fe-box img {
@@ -278,7 +284,7 @@ body {
 
 #product1 .pro .des i {
     font-size: 12px;
-    color: rgb(202, 127, 35)
+    color: rgb(202, 127, 35);
 }
 
 #product1 .pro .des h4 {
@@ -367,7 +373,6 @@ body {
     background-size: cover;
     background-position: center;
     padding: 30px;
-
 }
 
 #sm-banner h4 {
@@ -432,7 +437,6 @@ button.white {
     font-size: 15px;
 }
 
-
 #banner-3 {
     display: flex;
     justify-content: space-evenly;
@@ -442,7 +446,6 @@ button.white {
 
 #banner-3 .banner-box2 {
     background-image: url("img/banner/b4.jpg");
-
 }
 
 #banner-3 .banner-box3 {
@@ -469,7 +472,7 @@ button.white {
 #newsletter p {
     font-size: 16px;
     font-weight: 600;
-    color: #E3E6F3;
+    color: #e3e6f3;
 }
 
 #newsletter p span {
@@ -564,4 +567,159 @@ footer a:hover {
 footer .copyright {
     width: 100%;
     text-align: center;
+}
+
+/* Start Media Query */
+
+@media (max-width: 799px) {
+    .section-p1 {
+        padding: 40px 40px;
+    }
+
+    #navbar {
+        display: flex;
+        flex-direction: column;
+        align-items: flex-start;
+        justify-content: flex-start;
+        position: fixed;
+        top: 0;
+        right: -300px;
+        height: 100vh;
+        width: 300px;
+        background-color: #e3e6f3;
+        box-shadow: 0 40px 60px rgba(0, 0, 0, 0.1);
+        padding: 80px 0 0 10px;
+        transition: 0.3s;
+    }
+
+    #navbar.active {
+        right: 0px;
+    }
+
+    #navbar li {
+        margin-bottom: 25px;
+    }
+
+    #mobile {
+        display: flex;
+        align-items: center;
+    }
+
+    #mobile i {
+        color: #1a1a1a;
+        font-size: 24px;
+        padding-left: 20px;
+    }
+
+    #close {
+        display: initial;
+        position: absolute;
+        top: 30px;
+        left: 30px;
+        color: #222;
+        font-size: 24px;
+    }
+
+    #lg-bag {
+        display: none;
+    }
+
+    #hero {
+        height: 70vh;
+        width: 100%;
+        background-position: top 30% right 30%;
+    }
+
+    #feature {
+        justify-content: center;
+    }
+
+    #feature .fe-box {
+        margin: 15px 15px;
+    }
+
+    #product1 .pro-container {
+        justify-content: center;
+    }
+
+    #product1 .pro {
+        margin: 15px;
+    }
+
+    #banner {
+        height: 20vh;
+    }
+
+    #sm-banner .banner-box {
+
+        min-width: 100%;
+        height: 50vh;
+    }
+
+    #banner-3 {
+        padding: 0px 40px;
+    }
+
+    #banner-3 .banner-box {
+        width: 28%;
+    }
+
+    #newsletter .form {
+        width: 70%;
+    }
+}
+
+@media (max-width: 477px) {
+
+    .section-p1 {
+        padding: 20px;
+    }
+
+    #header {
+        padding: 10px 30px;
+
+    }
+
+    h2 {
+        font-size: 32px;
+    }
+
+    h1 {
+        font-size: 48px;
+    }
+
+    #hero h4 {
+        font-size: 32px;
+        padding-left: 3px;
+    }
+
+    #hero {
+        padding: 0 20px;
+        background-position: 55%;
+    }
+    #banner {
+        height: 40vh;
+    }
+    #sm-banner .banner-box {
+        height: 40vh;
+    }
+    #sm-banner .banner-box2 {
+        margin-top: 20px;
+    }
+    #banner-3 {
+        padding: 0 20px;
+    }
+    #banner-3 .banner-box{
+        width: 100%;
+    }
+    #newsletter .form {
+        width: 100%;
+    }
+    #newsletter {
+        padding: 40px 20px;
+    }
+    footer .copyright {
+        text-align: start;
+    }
+
 }
